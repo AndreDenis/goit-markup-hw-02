@@ -7,20 +7,38 @@
     --main-txt-color: #212121;
     --accent-txt-color: #2196F3;
     --logo-txt-color: #000000;
-    --light-txt-color: #FFFFFF;
+    --white-txt-color: #FFFFFF;
+    --grey-txt-color: #757575;
+    --btn-txt-color: #188CE8;
 
-    /*Background color*/
+    /*Background color*/ 
+    --light-color: #EEEEEE;
+    --darkgrey-color: #2F303A;
+    --header-color: #ECECEC;
+    --block-color: #F5F4FA;
 
     /*Other*/
 }
 body {
     font-family: var(--main-font);
-    color: var(--main-txt-color) ;
-    }  
+    color: var(--main-txt-color);
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    background-color:var(--white-txt-color);
+}  
 
-.list, .list-item, .footer-link, .logo-footer {
+.list, .list-item, .link-address, .footer-link, .logo-footer {
     list-style: none;
     text-decoration: none;
+}
+
+.link-address {
+    color: var(--grey-txt-color);
+}
+
+.link-address:hover,
+.link-address:focus {
+    color: var(--accent-txt-color);
 }
 
 .list-item .link {
@@ -45,32 +63,54 @@ body {
     width: 216px;
     border-radius: 4px;
     cursor: pointer;
+    font-family: inherit;
     font-size: 16px;
     font-weight: 700;
     line-height: calc(30 / 16);
     letter-spacing: 0.06em;
     text-align: center;
-    color: var(--main-txt-color);
+    color: var(--white-txt-color);
+    background-color: var(--accent-txt-color);
 }
 
 .btn:hover,
 .btn:focus {
-    color: var(--light-txt-color);
-    background-color: var(--accent-txt-color);
+    background-color: var(--btn-txt-color);
 }
 
-.btn-text {
+.btn-text-all {
+    font-family: inherit;
     font-size: 16px;
     font-weight: 500;
     line-height: calc(26 / 16);
     letter-spacing: 0.03em;
     text-align: center;
+    cursor: pointer;
+    color: var(--white-txt-color);
+    background-color: var(--accent-txt-color);
+}
+
+.btn-text-all:hover,
+.btn-text-all:focus {
+    background-color: #2196F3;
+}
+
+.btn-text {
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: calc(26 / 16);
+    letter-spacing: 0.03em;
+    text-align: center;
+    cursor: pointer;
+    background-color: var(--block-color);
     color: var(--main-txt-color);
+    
 }
 
 .btn-text:hover,
 .btn-text:focus {
-    color: var(--light-txt-color);
+    color: var(--white-txt-color);
     background-color: var(--accent-txt-color);
 }
 
@@ -85,11 +125,11 @@ body {
 }
 
 .header-logo span {
-        font-family: var(--secondary-font);
-        Font-style: Bold;
-        Font-size: 26px;
-        Line-height: calc(31 / 26);
-        color: var(--logo-txt-color);
+    font-family: var(--secondary-font);
+    Font-style: Bold;
+    Font-size: 26px;
+    Line-height: calc(31 / 26);
+    color: var(--logo-txt-color);
 }
 
 .main-title {
@@ -98,7 +138,8 @@ body {
     line-height: calc(60 / 44);
     letter-spacing: 0.06em;
     text-align: center;
-    color: var(--light-txt-color);
+    text-transform: uppercase;
+    color: var(--white-txt-color);
 }
 
 .section-body {
@@ -110,7 +151,23 @@ body {
     font-weight: 700;
     line-height: calc(16 / 14);
     letter-spacing: 0.03em;
-    text-align: left;
+    text-transform: uppercase;
+}
+
+.section-title-portfolio {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: calc(36 / 18);
+    letter-spacing: 0.06em;
+}
+
+.subtitle-portfolio {
+    font-size: 16px;
+    line-height: calc(30 / 16);
+    letter-spacing: 0.03em;
+    color: var(--grey-txt-color); 
 }
 
 .subtitle {
@@ -160,7 +217,7 @@ body {
     line-height: calc(36 / 26);
     letter-spacing: 0.03em;
     text-align: left;
-    color: var(--light-txt-color);
+    color: var(--white-txt-color);
 }
 
 .logo-footer {
@@ -174,16 +231,34 @@ body {
 }
 
 .footer {
-    height: 252px;
     background-color: #2F303A;
 }
 
 .footer-link {
     font-style: normal;
-    color: var(--light-txt-color);
+    color: var(--white-txt-color);
 }
 
 .footer-link:hover,
 .footer-link:focus {
     color: var(--accent-txt-color);
 }
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.section-team {
+    background: var(--block-color);
+}
+
