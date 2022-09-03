@@ -33,11 +33,17 @@ body {
 }
 
 .link-address {
+    font-family: var(--main-font);
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    font-style: normal;
     color: var(--grey-txt-color);
 }
 
 .link-address:hover,
 .link-address:focus {
+    font-weight: 500;
     color: var(--accent-txt-color);
 }
 
@@ -262,3 +268,7 @@ body {
     background: var(--block-color);
 }
 
+.link.current {
+    text-decoration: none;
+    color: var(--accent-txt-color);
+}
